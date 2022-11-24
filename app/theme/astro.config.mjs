@@ -6,8 +6,10 @@ import lit from "@astrojs/lit";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://odyssey-theme.littlesticks.dev/',
+
+  site: 'https://mckp0.github.io',
   // Your public domain, e.g.: https://my-site.dev/. Used to generate sitemaps and canonical URLs.
+  base: '/photography',
   sitemap: true,
   // Generate sitemap (set to "false" to disable)
   integrations: [sitemap(), mdx(), image(), lit()], // Add renderers to the config

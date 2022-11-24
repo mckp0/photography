@@ -3,50 +3,66 @@ import {Icon} from 'astro-icon'
 import {
 	Button,
   StickyTextImageSection,
-  CtaCardSection
+  CtaCardSection,
+Container,
+TextSection
 } from '@littlesticks/odyssey-theme-components';
 import Layout from '../../layouts/Page.astro';
 import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
 
-const seo = {
-	title: 'Landing Page #1 | Astro Odyssey Theme',
-	description: 'Landing Page #1 | Astro Odyssey Theme',
-};
-
+//UPDATE THIS
+const oneDrive = "https://sutdapac-my.sharepoint.com/:f:/g/personal/michael_chun_mymail_sutd_edu_sg/EjvmS5AG-Y9Ek1knH_wSEBoBJYu8J95MheRCzxKM9hnnvA?e=Hcu33y"
 const dir = "estonia";
 const imgCount = 44;
+
 const links = [];
 
 for (var i = 1; i <= imgCount; i++) {
-  	links.push(`https://github.com/mckp0/photography/blob/main/${dir}/${dir}-${i}.jpg?raw=true`)
+  	links.push(`https://raw.githubusercontent.com/mckp0/photography/main/${dir}/${dir}-${i}.jpg`)
 }
+
+const seo = {
+	title: "Estonia",
+	description: 'Landing Page #1 | Astro Odyssey Theme',
+};
+
 
 ---
 
 <Layout seo={seo}>
-	<StickyTextImageSection>
-		<div slot="text-container">
-		  <h2>Estonia</h2>
-		</div>
-		{ links.map((link) =>
-			<picture slot="image-container">
-			<img
-				src={`${link}`}
-				alt="Astro Odyssey"
-				loading="lazy"
-			/>
-			</picture>
-			<br>
-			)}
-	  </StickyTextImageSection>
+	<TextSection>
+		<section>
+			<div slot="text-container">
+			<h2>Estonia</h2>
+			</div>
+			{ links.map((link) =>
+				<div>
+				<picture slot="image-container">
+				<img
+					src={`${link}`}
+					alt="Astro Odyssey"
+					loading="lazy"
+				/>
+				</picture>
+				<br>
+			</div>
+				)}
+		</section>
+	</TextSection>
+	
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+			<h2>Download Now</h2>
+			<p>You will be redirected to OneDrive</p>
+			<Button href={oneDrive} customIcon>Let's Go <Fragment slot="icon">
+			<Icon name="ic:baseline-chevron-right"/>
+			</Fragment></Button>
+		</CtaCardSection>
 
-  <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
-    <h2>Download Now</h2>
-    <p>You will be redirected to OneDrive</p>
-    <Button href="https://sutdapac-my.sharepoint.com/:f:/g/personal/michael_chun_mymail_sutd_edu_sg/EjvmS5AG-Y9Ek1knH_wSEBoBJYu8J95MheRCzxKM9hnnvA?e=Hcu33y" customIcon>Let's Go <Fragment slot="icon">
-      <Icon name="ic:baseline-chevron-right"/>
-    </Fragment></Button>
-  </CtaCardSection>
+	
 
 </Layout>
 
+<style>
+	.image {
+	}
+</style>
