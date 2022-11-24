@@ -7,42 +7,66 @@ import {
 	ThreeColumnTextSection,
 	YouTubeEmbedSection,
   StickyTextImageSection,
-  CtaCardSection
+  CtaCardSection,
+  FeatureCard,
+  Container,
 } from '@littlesticks/odyssey-theme-components';
 import Layout from '../../layouts/Page.astro';
 import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
 
 const seo = {
-	title: 'Landing Page #1 | Astro Odyssey Theme',
-	description: 'Landing Page #1 | Astro Odyssey Theme',
+	title: 'Photos',
+	description: 'View all photos',
 };
 
-const repo = "https://github.com/mckp0/photography/blob/main/"
-const end = ".jpg?raw=true"
 ---
 
 <!-- <AnnouncementBar text="Read Our Latest Blog Post" href="/blog/posts/remote-work-mental-health/" slot="announcement-bar"/> -->
 <Layout>
-	<TextAndImageHero>
+	<!-- <TextAndImageHero>
 		<div slot="text-container">
 			<h1>my pictures</h1>
 			<p>--in progress--</p>
 		</div>
 		<div slot="btns-container">
+			
 			<Button href="/photography/photos/estonia" customIcon
-				>Estonia <Fragment slot="icon">
+				>View Estonia <Fragment slot="icon">
+          <Icon name="ic:baseline-chevron-right"/>
+        </Fragment></Button>
+		<br>
+			<Button href="/photography/photos/sweden" customIcon
+				>View Sweden <Fragment slot="icon">
           <Icon name="ic:baseline-chevron-right"/>
         </Fragment></Button
 			>
 		</div>
-		<picture slot="image-container">
+		<!-- <picture slot="image-container">
 			<img
 				src=""
 				alt="-- unable to load -"
 				id="home-hero-image"
 			/>
 		</picture>
-	</TextAndImageHero>
+	</TextAndImageHero> -->
+
+	<Container>
+		<section class="feature-card__section">
+			<h2>Photos</h2>
+			<div class="feature-card__grid">
+				<FeatureCard href="/photography/photos/sweden" title="sweden" imgSrc="https://github.com/mckp0/photography/blob/main/assets/sweden/sweden-17.jpg?raw=true">
+				</FeatureCard>
+				<FeatureCard href="/photography/photos/estonia" title="estonia" imgSrc="https://github.com/mckp0/photography/blob/main/assets/estonia/estonia-9.jpg?raw=true">
+				</FeatureCard>
+				<FeatureCard href="/photography/photos/rovaniemi" title="rovaniemi" imgSrc="https://github.com/mckp0/photography/blob/main/assets/rovaniemi/rovaniemi-1.jpg?raw=true">
+				</FeatureCard>
+				<FeatureCard href="/photography/photos/paris" title="paris" imgSrc="https://github.com/mckp0/photography/blob/main/assets/paris/paris-1.jpg?raw=true">
+				</FeatureCard>
+				<FeatureCard href="/photography/photos/helsinki-aug" title="helsinki aug" imgSrc="https://github.com/mckp0/photography/blob/main/assets/helsinki-aug/helsinki-aug-1.jpg?raw=true">
+				</FeatureCard>
+			</div>
+		</section>
+	</Container>
 
 	<!-- <CustomerQuoteSection
 		quoteText="Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, vero nobis? Voluptas assumenda, voluptatibus commodi qui ducimus delectus praesentium maiores, impedit iure labore ratione, ea facilis numquam doloremque aperiam aspernatur."
@@ -84,7 +108,7 @@ const end = ".jpg?raw=true"
 
 	<!-- <YouTubeEmbedSection url="https://www.youtube.com/watch?v=cbYr75_R15M" rounded /> -->
 
-  <StickyTextImageSection>
+  <!-- <StickyTextImageSection>
     <div slot="text-container">
       <h2>Features</h2>
       <h3>SEO</h3>
@@ -116,7 +140,7 @@ const end = ".jpg?raw=true"
         loading="lazy"
       />
     </picture>
-  </StickyTextImageSection>
+  </StickyTextImageSection> -->
 
   <!-- <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
     <h2>Start Your Website Today</h2>
@@ -128,3 +152,19 @@ const end = ".jpg?raw=true"
 
 </Layout>
 
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

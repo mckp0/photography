@@ -2,13 +2,10 @@
 import {Icon} from 'astro-icon'
 import {
 	Button,
-  StickyTextImageSection,
   CtaCardSection,
-Container,
 TextSection
 } from '@littlesticks/odyssey-theme-components';
 import Layout from '../../layouts/Page.astro';
-import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
 
 //UPDATE THIS
 const oneDrive = "https://sutdapac-my.sharepoint.com/:f:/g/personal/michael_chun_mymail_sutd_edu_sg/EjvmS5AG-Y9Ek1knH_wSEBoBJYu8J95MheRCzxKM9hnnvA?e=Hcu33y"
@@ -23,7 +20,7 @@ for (var i = 1; i <= imgCount; i++) {
 
 const seo = {
 	title: "Estonia",
-	description: 'Landing Page #1 | Astro Odyssey Theme',
+	description: 'view estonia photos',
 };
 
 
@@ -35,7 +32,6 @@ const seo = {
 			<div slot="text-container">
 			<h2>Estonia</h2>
 			</div>
-			
 		</section>
 	</TextSection>
 	<div class="img-ctn">
@@ -50,12 +46,14 @@ const seo = {
 		</div>
 	
 	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
-			<h2>Download Now</h2>
-			<p>You will be redirected to OneDrive</p>
-			<Button href={oneDrive} customIcon>Let's Go <Fragment slot="icon">
-			<Icon name="ic:baseline-chevron-right"/>
-			</Fragment></Button>
-		</CtaCardSection>
+		<h2>Download Now</h2>
+		<p>You will be redirected to OneDrive</p>
+		<Button href={oneDrive} customIcon>Let's Go <Fragment slot="icon">
+		<Icon name="ic:baseline-chevron-right"/>
+		</Fragment></Button>
+	</CtaCardSection>
+
+	<br>
 
 	
 
@@ -70,7 +68,7 @@ const seo = {
 	}
 
 	.image {
-		max-width: 500px;
+		max-width: 90vw;
 		border-radius: 16px;
 		margin-top: 16px;
 		margin-bottom: 16px;
