@@ -6,24 +6,28 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 ---
 
 <Layout>
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h2>pages</h2>
-			<p>
-				
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/photography/photos/main" title="photos" imgSrc="https://github.com/mckp0/photography/blob/main/helsinki-aug/helsinki-aug-06.jpg?raw=true">
-				</FeatureCard>
-				<!-- <FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
-				</FeatureCard> -->
-        <!-- <FeatureCard href="#" title="Landing Page 3" imgSrc="/assets/images/home/screenshots/landing-3">
-				</FeatureCard> -->
-			</div>
-		</section>
-	</Container>
+	<div class="page_layout">
+		<HomeHeroSection />
+		<Container>
+			<section class="feature-card__section">
+				<h3>sections</h3>
+				<p>
+					
+				</p>
+				<div class="feature-card__grid">
+					<FeatureCard href="/photography/photos/main" title="travel photos" imgSrc="https://images.unsplash.com/photo-1611842642932-fbec0d723eb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aG9sZGluZyUyMGNhbWVyYXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80">
+					</FeatureCard>
+					<FeatureCard href="/photography/keyboards" title="keyboards" imgSrc="https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29tcHV0ZXIlMjBrZXlib2FyZHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80">
+					</FeatureCard>
+					<!-- <FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
+					</FeatureCard> -->
+			<!-- <FeatureCard href="#" title="Landing Page 3" imgSrc="/assets/images/home/screenshots/landing-3">
+					</FeatureCard> -->
+				</div>
+			</section>
+		</Container>
 
+	</div>
 	<!-- <Container>
 		<section class="feature-card__section">
 			<h2>Company Pages</h2>
@@ -78,6 +82,13 @@ import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro'
 </Layout>
 
 <style>
+	.page_layout {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
 	.feature-card__section {
 		margin: var(--section-margin) auto;
 	}

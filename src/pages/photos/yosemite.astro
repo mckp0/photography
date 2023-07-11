@@ -1,0 +1,77 @@
+---
+import {Icon} from 'astro-icon'
+import {
+	Button,
+  CtaCardSection,
+TextSection
+} from '@littlesticks/odyssey-theme-components';
+import Layout from '../../layouts/Page.astro';
+
+//UPDATE THIS
+const oneDrive = "https://sutdapac-my.sharepoint.com/:f:/g/personal/michael_chun_mymail_sutd_edu_sg/EkjAS3CfOl9Mkf7ylCEiE2QBZ1xKegbFB5bNtSLQJJyHew?e=ozZgWT"
+const dir = "yosemite";
+const imgCount = 43;
+
+const links = [];
+
+for (var i = 1; i <= imgCount; i++) {
+  	links.push(`https://raw.githubusercontent.com/mckp0/photography/main/assets/${dir}/${dir}-${i}.jpg`)
+}
+
+const seo = {
+	title: "Estonia",
+	description: 'view estonia photos',
+};
+
+
+---
+
+<Layout seo={seo}>
+	<TextSection>
+		<section>
+			<div slot="text-container">
+			<h2>Estonia</h2>
+			</div>
+		</section>
+	</TextSection>
+	<div class="img-ctn">
+		{ links.map((link) =>
+				<img
+					src={`${link}`}
+					alt="Astro Odyssey"
+					loading="lazy"
+					class="image"
+				/>
+			)}
+		</div>
+	
+	<CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
+		<h2>Download Now</h2>
+		<p>You will be redirected to OneDrive</p>
+		<Button href={oneDrive} customIcon>Let's Go <Fragment slot="icon">
+		<Icon name="ic:baseline-chevron-right"/>
+		</Fragment></Button>
+	</CtaCardSection>
+
+	<br>
+
+	
+
+</Layout>
+
+<style>
+	.img-ctn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.image {
+		max-width: 90vw;
+		max-height: 90vh;
+		border-radius: 16px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+</style>

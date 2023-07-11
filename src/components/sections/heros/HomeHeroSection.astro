@@ -8,9 +8,9 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 <Container>
 	<section class="hero-section__section">
 		<div class="hero-section__text">
-				<h1>mckp</h1>
+				<h1>michael's things</h1>
 				<p>
-					-- website in construction --
+					where my hobbies are showcased
 				</p>
 				<!-- <div class="hero-btns__container">
 					<Button href="/theme/get-started" customIcon
@@ -23,11 +23,11 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 					<Button href="/theme/style-guide" unelevated>Style Guide</Button>
 				</div> -->
 				<br>
-				<p>
+				<!-- <p>
 					fun theme switcher below \/
 				</p>
         {settings.enableThemeSwitcher && <ThemeSwitcher client:load/>}
-		</div>
+		</div> -->
 		<!-- <div class="hero-section__image">
 				<picture>
 					<img
@@ -44,14 +44,15 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 	.hero-section__section {
 		margin: var(--section-margin) auto;
 		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
-		display: grid;
+		/* display: grid; */
+		width: 100%;
+
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		gap: 1rem;
 	}
 	.hero-section__text {
 		justify-self: center;
-		max-width: 25rem;
 	}
 	.hero-btns__container {
 		display: flex;

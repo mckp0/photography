@@ -16,8 +16,8 @@ const { seo } = Astro.props as Props;
 
 <Layout seo={seo}>
 	<Header rightMenu navData={nav} slot="header">
-		<span slot="logo">
-			mckp
+		<span slot="logo" class="home" >
+			mckp's website
 		</span>
 	</Header>
 	<div id="page">
@@ -25,4 +25,10 @@ const { seo } = Astro.props as Props;
 	</div>
 	
 </Layout>
+
+<style>
+	.home {
+		margin-left: 10;
+	}
+</style>
 
