@@ -10,7 +10,7 @@ import Layout from '../../layouts/Page.astro';
 //UPDATE THIS
 const oneDrive = "https://sutdapac-my.sharepoint.com/:f:/g/personal/michael_chun_mymail_sutd_edu_sg/EkjAS3CfOl9Mkf7ylCEiE2QBZ1xKegbFB5bNtSLQJJyHew?e=ozZgWT"
 const dir = "yosemite";
-const imgCount = 43;
+const imgCount = 35;
 
 const links = [];
 
@@ -19,8 +19,8 @@ for (var i = 1; i <= imgCount; i++) {
 }
 
 const seo = {
-	title: "Yosemite",
-	description: 'view yosemite photos',
+	title: "Yosemite", //UPDATE
+	description: 'view yosemite photos',  //UPDATE
 };
 
 
@@ -30,7 +30,8 @@ const seo = {
 	<TextSection>
 		<section>
 			<div slot="text-container">
-			<h2>Yosemite</h2>
+			<!-- UPDATE -->
+			<h2>Yosemite</h2> 
 			</div>
 		</section>
 	</TextSection>
@@ -38,7 +39,7 @@ const seo = {
 		{ links.map((link) =>
 				<img
 					src={`${link}`}
-					alt="Astro Odyssey"
+					alt="loading..."
 					loading="lazy"
 					class="image"
 				/>
