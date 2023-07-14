@@ -1,18 +1,18 @@
 export const nav = [
 	{
-		title: 'Home',
+		title: 'home',
 		slug: '/photography/',
 	},
 	{
-		title: 'Photos',
-		slug: '/photography/photos/main',
+		title: 'photos',
+		slug: '/photography/photos',
 	},
 	{
-		title: 'About',
-		slug: '/company/about',
+		title: 'keyboards',
+		slug: '/photography/keyboards',
 	},
 	{
-		title: 'Contact',
-		slug: '/company/contact',
+		title: '{future}',
+		slug: '/',
 	},
 ];
